@@ -19,10 +19,19 @@
            } else {
            var alea = parseInt(Math.random() * 2)
            alert(alea)
-           } if(alea == 0 & jogador1 < jogador2){
-            alert('Jogador 1 ganhou')
+           } if(alea == 0){
+
+            if(jogador1 < jogador2){
+                alert('Jogador 1 ganhou')
+            } else {
+                alert('Jogador 2 ganhou')
+            }
            } else {
+            if(jogador1 > jogador2){
+            alert('Jogador 1 ganhou')
+        } else {
             alert('Jogador 2 ganhou')
+        }
            }
         
            
