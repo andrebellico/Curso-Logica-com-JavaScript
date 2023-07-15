@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de Programação com JavaScript</title>
+        <meta charset="uft-8">
+    </head>
+    <body>
+        <h1>Lógica de Programação com JavaScript</h1>
+
+        <script>
+
+            var numero = prompt ('Digite um número');
+            numero = parseFloat(numero);
+            
+            var i = 1;
+
+            while(i <= 100){
+                document.write(numero + ' x ' + i + ' = ' + (numero * i) + '<br>');
+                if(i % 10 === 0){
+                    document.write('<hr>');
+                }
+                i++
+            }
+            document.write('SAIU DO LOOP');
+
+        </script>
+    </body>
+</html>
