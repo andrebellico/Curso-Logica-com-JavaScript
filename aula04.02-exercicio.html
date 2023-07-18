@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de Programação com JavaScript</title>
+        <meta charset="uft-8">
+    </head>
+    <body>
+        <h1>Mini Calculadora</h1>
+
+        <button onclick="mais()">+</button>
+        <button onclick="menos()">-</button>
+        <button onclick="vezes()">x</button>
+        <button onclick="dividir()">/</button>
+        
+        <div id="output"></div>
+
+        <script>
+
+            var n = prompt('Digite um número');
+            n = parseFloat(n);
+
+            var mensagem = '';
+            mensagem += n
+            var output = document.querySelector('#output')
+            output.innerHTML = mensagem;
+
+
+
+            function mais(){
+
+                mensagem = '';
+
+                var somar = prompt('Digite outro numero');
+                somar = parseFloat(somar);
+
+                var resultado = n + somar
+                mensagem += resultado
+
+                n = resultado
+                
+                output.innerHTML = mensagem;
+            }
+            function menos(){
+
+                mensagem = '';
+
+                var menos = prompt('Digite outro numero');
+                menos = parseFloat(menos);
+
+                var resultado = n - menos
+                mensagem += resultado
+
+                n = resultado
+                
+                output.innerHTML = mensagem;
+            }
+            function vezes(){
+
+                mensagem = '';
+
+                var vezes = prompt('Digite outro numero');
+                vezes = parseFloat(vezes);
+
+                var resultado = n * vezes
+                mensagem += resultado
+
+                n = resultado
+                
+                output.innerHTML = mensagem;
+            }
+            function dividir(){
+
+                mensagem = '';
+
+                var dividir = prompt('Digite outro numero');
+                dividir = parseFloat(dividir);
+
+                var resultado = n / dividir
+                mensagem += resultado
+
+                n = resultado
+                
+                output.innerHTML = mensagem;
+            }
+            
+            
+           
+
+           
+        </script>
+
+    </body>
+</html>
