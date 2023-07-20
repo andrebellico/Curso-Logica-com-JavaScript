@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de Programação com JavaScript</title>
+        <meta charset="uft-8">
+    </head>
+    <body>
+        <h1>Funções que recebem parâmetros</h1>
+        <button onclick="mostrarArea(largura, altura)">Mostrar Área</button>
+        <div id="output"></div>
+        
+        <script>
+        
+        var largura = prompt('Digite a largura do retângulo');
+            largura = parseFloat(largura);
+        var altura = prompt('Digite o comprimento');
+            altura = parseFloat(altura);
+            
+        function mostrarArea(l, a){
+            alert('A área total é: ' + (largura * altura));
+        }
+
+        
+
+        </script>
+    </body>
+</html>
