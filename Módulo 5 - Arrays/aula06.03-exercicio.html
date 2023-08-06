@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de Programação com JavaScript</title>
+        <meta charset="uft-8">
+    </head>
+    <body>
+        <h1>Exercicio de Array com Objetos</h1>
+        <div id="output"></div>
+
+        <script>
+        
+        var dados = [
+            {'nome': 'Maria Souza Santos', 'email': 'maria@gmail.com'},
+            {'nome': 'André Vinicius Soares Bellico', 'email': 'mhsandrevsbellico@gmail.com'},
+            {'nome': 'Amaral Mashida', 'email': 'matheusdoamaral@hotmail.com'}
+        ]
+
+        var msg = '';
+
+        for(var i = 0; i < dados.length; i++){
+            msg += '<h3>Nomes: ' + dados[i].nome + ' - ' + dados[i].email + '</h3>' + '<br>'
+        }
+
+        document.querySelector('#output').innerHTML = msg;
+        
+        </script>
+
+    </body>
+</html>

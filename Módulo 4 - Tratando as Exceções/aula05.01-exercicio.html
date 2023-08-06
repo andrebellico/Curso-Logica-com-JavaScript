@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de Programação com JavaScript</title>
+        <meta charset="uft-8">
+    </head>
+    <body>
+        <h1>Estudos de Erro</h1>
+        
+        <button onclick="mostrarAreaAlert(largura, altura)">Mostrar Area alert</button>
+        
+        <div id="output"></div>
+
+        <script>
+        
+        function mostrarAreaAlert(largura, altura){
+            try{
+            var area = calcularArea(largura, altura);
+            }catch(e){
+                area = e
+            }
+            alert('A área de retângulo é: ' + area);
+        }
+
+        var largura = prompt('digite a largura do retângulo');
+        largura = parseFloat(largura);
+
+        var altura = prompt('digite a altura do retângulo');
+        altura = parseFloat(altura);
+
+        function calcularArea(l,a){
+            if(l === undefined || a === undefined){
+                throw new Error('Digite apenas números');
+            }
+            if( isNaN(l) || isNaN(a) ){
+                throw new Error('Digite dois números');
+            }
+            return largura * altura;
+        }
+
+        
+        
+
+
+        </script>
+    </body>
+</html>

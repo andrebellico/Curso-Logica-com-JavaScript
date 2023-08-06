@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de Programação com JavaScript</title>
+        <meta charset="uft-8">
+    </head>
+    <body>
+        <h1>Exercicio com Array</h1>
+        <div id="output"></div>
+    </body>
+
+    <script>
+
+        var arr = new Array(25, 30, 45, 28, 0, 12, 78, 64);
+        //resultado é 212
+        var soma = 0;
+        for(var i = 0; i < arr.length; i++){
+            if(arr[i] % 2 === 0){
+                soma += arr[i]
+                var msg = '';
+                
+                msg += 'Soma de todos os pares da array é: ' + soma + '<br>'
+                
+                var output = document.querySelector('#output').innerHTML = msg
+            }
+        }
+
+    </script>
+</html>

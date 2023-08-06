@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de Programação com JavaScript</title>
+        <meta charset="uft-8">
+    </head>
+    <body>
+        <h1>Funções que recebem parâmetros</h1>
+        <button onclick="mostrarAreaAlert()">Mostrar Área Alert</button>
+        <button onclick="mostrarAreaOutput()">Mostrar Área output</button>
+        <div id="output"></div>
+        
+        <script>
+        
+
+        function calcularArea(l, a){
+
+            return l * a
+        }
+            
+        function mostrarAreaAlert(){
+            
+            var largura = prompt('Digite a largura do retângulo');
+            largura = parseFloat(largura);
+            var altura = prompt('Digite o comprimento');
+            altura = parseFloat(altura);
+            var area = calcularArea(largura, altura)
+
+            alert('A área total é: ' + area);
+        }
+
+        function mostrarAreaOutput(){
+
+            var largura = prompt('Digite a largura do retângulo');
+            largura = parseFloat(largura);
+            var altura = prompt('Digite o comprimento');
+            altura = parseFloat(altura);
+
+            var area = calcularArea(altura, largura)
+
+            document.querySelector('#output').innerHTML = 'A área total é: ' + area
+        }
+
+        
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de Programação com JavaScript</title>
+        <meta charset="uft-8">
+    </head>
+    <body>
+        <h1>Reforço e Aprimoramento da Mini Calculadora</h1>
+
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('*')">*</button>
+        <button onclick="iniciarCalculo('/')">/</button>
+
+        <div id="output"></div>
+
+        <script>
+
+        var n1 = prompt('digite um numero');
+        n1 = parseFloat(n1);
+
+        escreve(n1);
+
+        function escreve(mensagem){
+            var output = document.querySelector('#output').innerHTML = mensagem;
+        }
+
+        function iniciarCalculo(simbolo){
+            
+            var n1 = parseFloat(document.querySelector('#output').textContent)
+
+            var n2 = prompt('Digite outro número');
+            n2 = parseFloat(n2);
+
+            var msg = calcular(simbolo,n1,n2);
+
+            escreve(msg);
+
+        }
+
+        function calcular(simbolo,n1,n2){
+            
+            numeroCalculado = null;
+
+            switch(simbolo){
+                case '+':
+                numeroCalculado = n1 + n2;
+                break;
+                case '-':
+                numeroCalculado = n1 - n2;
+                break;
+                case '*':
+                numeroCalculado = n1 * n2;
+                break;
+                case '/':
+                numeroCalculado = n1 / n2;
+            }
+
+            return numeroCalculado;
+        }
+
+        </script>
+
+    </body>
+</html>

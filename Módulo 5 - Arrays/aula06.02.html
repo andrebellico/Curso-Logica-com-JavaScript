@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de Programação com JavaScript</title>
+        <meta charset="uft-8">
+    </head>
+    <body>
+        <h1>Objetos e Propriedades de objetos</h1>
+        <div id="output"></div>
+
+        <script>
+
+        var produto1 = new Object();        
+        produto1.nome = 'Lápis preto' 
+        produto1.preco = 2.0
+        produto1.estoque = 198
+
+        produto1.comprar = function(qtd){
+            if(!qtd){
+                qtd = 1;
+            }
+            this.estoque = this.estoque - qtd
+        }
+
+         var output = document.querySelector('#output').innerHTML = 'Preço: ' + produto1.preco + '<br>' + 'Nome: ' + produto1.nome + '<br>' + 'Estoque: ' + produto1.estoque + '<br>'
+        </script>
+    </body>
+</html>
